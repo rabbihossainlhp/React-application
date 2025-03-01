@@ -1,10 +1,22 @@
+import { BrowserRouter, Routes, Route} from "react-router-dom"
+import Home from "./Pages/Home"
+import ProductDetails from "./Pages/ProductDetails";
+import CartPage from "./Pages/CartPage";
+import './index.css';
+import Navbar from "./Components/Navbar";
+
 
 function App() {
 
   return (
-    <>
-      <h1 className="text-3xl font-bold text-red-500">Hello</h1>
-    </>
+    <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/product" element={<ProductDetails/>} />
+        <Route path="/cart" element={<CartPage/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

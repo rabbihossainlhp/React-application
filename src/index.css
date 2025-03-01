@@ -3,3 +3,7 @@
 
 @import "tailwindcss";
   
+
+body{
+    font-family: "Poppins";
+}
