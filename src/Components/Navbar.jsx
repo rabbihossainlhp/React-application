@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {User ,  AlignRight} from "lucide-react"
+import {User ,  AlignRight , X} from "lucide-react"
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -65,9 +65,15 @@ const Navbar = () => {
                     <User size={28} 
                         className=' bg-gray-500  order-2 text-black rounded-full cursor-pointer w-10 h-10 p-1  '
                         onClick={handleUserIcon}/>
-                    <AlignRight size={28} 
-                        className=' bg-gray-500 order-1 text-black rounded-full cursor-pointer w-10 h-10 p-1 md:hidden' 
-                        onClick={handleNavResponsive}/>  
+                    <div>
+                        {isNavOpen? 
+                        <X className=' bg-gray-500 order-1 text-black rounded-full cursor-pointer w-10 h-10 p-1 md:hidden' 
+                        onClick={handleNavResponsive}/>
+                        :
+                        <AlignRight className=' bg-gray-500 order-1 text-black rounded-full cursor-pointer w-10 h-10 p-1 md:hidden' 
+                        onClick={handleNavResponsive} />   
+                        }
+                    </div>
                         
                 </div>
                 
