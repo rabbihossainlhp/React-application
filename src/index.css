@@ -7,3 +7,9 @@
 body{
     font-family: "Poppins";
 }
+
+.hero{
+    background-image: url("./assets/images/HeroHome.jpg");
+    background-size: cover;
+    height: 70vh;
+}
