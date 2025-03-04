@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductGrid from '../Components/ProductGrid';
+import Footer from '../Components/Footer';
 
 const Home = () => {
     const catagory = [
@@ -27,6 +28,7 @@ const Home = () => {
                 </div>
                 <ProductGrid/>
             </div>
+            <Footer/>
         </div>
     );
 };
