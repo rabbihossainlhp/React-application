@@ -12,8 +12,8 @@ const Home = () => {
     return (
         <div>
             <div className="hero "></div>
-            <div className="catagoryContainer ">
-                <div className="flex gap-3">
+            <div className="catagoryContainer overflow-hidden ">
+                <div className="grid grid-cols-2 gap-1 sm:gap-3 mt-3  sm:flex">
                     {
                         catagory.map((catagory,index)=>{
                         return (
