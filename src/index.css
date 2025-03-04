@@ -2,14 +2,14 @@
 
 
 @import "tailwindcss";
-  
+
 
 body{
     font-family: "Poppins";
 }
 
 .hero{
-    background-image: url("./assets/images/HeroHome.jpg");
+    background-image: url("./assets/HeroHome.jpg");
     background-size: cover;
     height: 70vh;
 }

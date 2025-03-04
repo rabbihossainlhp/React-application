@@ -20,7 +20,7 @@ const Navbar = () => {
                 <div className='flex absolute left-1/12'>
                     <li>
                         <Link to="/">
-                            <img src="/src/assets/images/Logo.png" 
+                            <img src="src/assets/Logo.png" 
                                 alt="DigiSphere-logo" 
                                 className='w-36 h-auto object-cover background-cover'
                             />

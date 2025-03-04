@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductGrid from '../Components/ProductGrid';
 
 const Home = () => {
     const catagory = [
@@ -24,7 +25,7 @@ const Home = () => {
                         })
                     }
                 </div>
-                
+                <ProductGrid/>
             </div>
         </div>
     );
