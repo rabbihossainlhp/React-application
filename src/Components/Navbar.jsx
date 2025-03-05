@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {User ,  AlignRight , X , ShoppingCart} from "lucide-react"
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { filteredSearchProducts } from '../features/products/ProductSlice';
     
 
@@ -24,6 +24,9 @@ const Navbar = () => {
         dispatch(filteredSearchProducts(event.target.value));
     };
     
+
+    const cartItem = useSelector((state)=> state.cart.items);
+    const totalQuantity = cartItem.reduce((total,item)=> total+ item.quantity, 0)
 
     return (
         <header className='navbar flex flex-col items-center justify-between  h-fit'>
@@ -99,7 +102,14 @@ const Navbar = () => {
                             onChange={handleSearchWise}                          
                     />
                 </form>
-                <ShoppingCart size={36} className=' cursor-pointer p-1 bg-gray-300 rounded-md' />    
+                <Link to={'/cart'} className='relative'>
+                    <ShoppingCart size={36} className=' cursor-pointer p-1 bg-gray-300 rounded-md' />
+                    {
+                        totalQuantity > 0 &&(
+                            <span className='absolute -top-1 -right-1 w-5 h-5 bg-blue-400 text-center rounded-full ' >{totalQuantity}</span>
+                        )
+                    }
+                </Link>
             </nav>
         </header>
     );  
