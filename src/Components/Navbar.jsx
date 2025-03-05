@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {User ,  AlignRight , X , ShoppingCart} from "lucide-react"
+import { useDispatch } from 'react-redux';
+import { filteredSearchProducts } from '../features/products/ProductSlice';
+    
+
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +17,13 @@ const Navbar = () => {
     const handleNavResponsive = ()=>{
         setIsNavOpen(!isNavOpen);
     }
+
+    const dispatch = useDispatch();
+
+    const handleSearchWise = (event) =>{
+        dispatch(filteredSearchProducts(event.target.value));
+    };
+    
 
     return (
         <header className='navbar flex flex-col items-center justify-between  h-fit'>
@@ -84,7 +95,8 @@ const Navbar = () => {
                     <input type="text"
                             placeholder='Search product'
                             className='w-72 rounded-2xl p-1 pl-2.5 focus:outline-none'
-                            style={{border:"1px solid green"}}                            
+                            style={{border:"1px solid green"}}  
+                            onChange={handleSearchWise}                          
                     />
                 </form>
                 <ShoppingCart size={36} className=' cursor-pointer p-1 bg-gray-300 rounded-md' />    
