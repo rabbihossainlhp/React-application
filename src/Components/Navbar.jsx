@@ -6,7 +6,7 @@ import { filteredSearchProducts } from '../features/products/ProductSlice';
     
 
 
-const Navbar = () => {
+const Navbar = () =>{
     const [isOpen, setIsOpen] = useState(false);
     const[isNavOpen,setIsNavOpen] = useState(false);
 
@@ -114,5 +114,6 @@ const Navbar = () => {
         </header>
     );  
 };
+        
 
 export default Navbar;
