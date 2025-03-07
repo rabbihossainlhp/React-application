@@ -31,7 +31,7 @@ const CartPage = () => {
             ) : (
                 <div className='grid grid-cols-1 gap-4'>
                     {cartItems.map((item) => (
-                        <div key={item.id} className='flex justify-between items-center p-4 border rounded'>
+                        <div key={item.id} className='flex flex-col  md:flex-row justify-between items-center p-4 border rounded'>
                             <div className='flex items-center'>
                                 <img src={item.imageUrl} alt={item.name} className='w-20 h-20 object-cover mr-4' />
                                 <div>
@@ -47,7 +47,7 @@ const CartPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='flex gap-2'>
+                            <div className='flex gap-2 md:mt-0 mt-5'>
                                 <button
                                     className='bg-red-500 text-white px-4 py-2 rounded'
                                     onClick={() => handleRemoveFromCart(item.id)}

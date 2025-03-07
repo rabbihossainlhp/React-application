@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {User ,  AlignRight , X , ShoppingCart} from "lucide-react"
 import { useDispatch, useSelector } from 'react-redux';
 import { filteredSearchProducts } from '../features/products/ProductSlice';
-    
+import logo from '../assets/Logo.png'
 
 
 const Navbar = () =>{
@@ -34,7 +34,7 @@ const Navbar = () =>{
                 <div className='flex absolute left-1/12'>
                     <li>
                         <Link to="/">
-                            <img src="../../src/assets/Logo.png" 
+                            <img src={logo} 
                                 alt="DigiSphere-logo" 
                                 className='w-36 h-auto object-cover background-cover'
                             />
@@ -42,7 +42,7 @@ const Navbar = () =>{
                     </li>
                 </div>
                 <div className={`absolute md:-translate-x-0 top-14 md:left-0 bg-blue-200 w-full 
-                        font-bold text-lg md:flex flex-col md:flex-row justify-evenly md:items-center md:w-2/5 transition-all duration-500      
+                        font-bold text-lg md:flex flex-col z-20 md:flex-row justify-evenly md:items-center md:w-2/5 transition-all duration-500      
                         md:relative md:top-0 md:bg-transparent ${isNavOpen ? "translate-x-0" : "-translate-x-full"}`}>
 
                     <li className='hover:bg-amber-200 h-10 w-full flex justify-center cursor-pointer items-center transition-duration:2ms'>
