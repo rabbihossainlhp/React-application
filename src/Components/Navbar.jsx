@@ -66,7 +66,7 @@ const Navbar = () =>{
                 <div className={`${
                                 isOpen
                                 ? 
-                                "w-44 h-20 bg-gray-300 rounded-2xl absolute right-1/12 top-14 flex flex-col justify-evenly items-center "
+                                "w-44 h-20 bg-gray-300 rounded-2xl absolute right-1/12 top-14 z-10 flex flex-col justify-evenly items-center "
                                 :
                                 "hidden"}`}>
                     <li>
